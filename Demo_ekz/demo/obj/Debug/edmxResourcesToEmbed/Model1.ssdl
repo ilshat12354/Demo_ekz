@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DemkaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fio" Type="nchar" MaxLength="150" Nullable="false" />
+    <Property Name="series" Type="int" Nullable="false" />
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="birthday" Type="date" Nullable="false" />
+    <Property Name="address" Type="nchar" MaxLength="200" Nullable="false" />
+    <Property Name="email" Type="nchar" MaxLength="200" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="offer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="code" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="create_data" Type="datetime" Nullable="false" />
+    <Property Name="create_time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="client_id" Type="int" Nullable="false" />
+    <Property Name="offers" Type="nchar" MaxLength="200" Nullable="false" />
+    <Property Name="status" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="end_date" Type="date" />
+    <Property Name="offer_time" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sys-enter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="fullname" Type="nchar" MaxLength="150" Nullable="false" />
+    <Property Name="login" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="last_enter" Type="datetime" Nullable="false" />
+    <Property Name="result" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="worker">
+    <Key>
+      <PropertyRef Name="worker_id" />
+    </Key>
+    <Property Name="worker_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="position" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="firstname" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="secondname" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="lastname" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="login" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище DemkaModelContainer">
+    <EntitySet Name="client" EntityType="Self.client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="offer" EntityType="Self.offer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sys-enter" EntityType="Self.sys-enter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="worker" EntityType="Self.worker" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

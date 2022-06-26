@@ -1,0 +1,31 @@
+﻿<Window x:Class="demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demo"
+        mc:Ignorable="d"
+        Icon="C:\Users\Ilshat\Desktop\demo\demo\media\logo.ico"
+        Title="LoginForm" Height="500" Width="550" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150">
+            </RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#76e383" Grid.Row="0" Orientation="Vertical">
+            <Image Height="100" Margin="-250 30 0 0" Width="100">
+                <Image.Source>/media/logo.ico</Image.Source>
+            </Image>
+            <TextBlock Style="{StaticResource headline_hat}" Text="Приэльбрусье" FontSize="30" Margin="130 -70 0 0"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" Width="550">
+            <TextBlock Style="{StaticResource headline_content}" HorizontalAlignment="Center" Text="Авторизация" Margin="0 40 0 0"></TextBlock>
+            <Label Content="Логин" Margin="30 20 0 0" FontFamily="Comic Sans MS" FontSize="16" Foreground="DimGray" Width="278"></Label>
+            <TextBox x:Name="login" Style="{StaticResource textbox_style}"/>
+            <Label Content="Пароль" Margin="30 10 0 0" FontFamily="Comic Sans MS" FontSize="16" Foreground="DimGray" Width="277"></Label>
+            <TextBox x:Name="password" Style="{StaticResource textbox_style}"/>
+            <Button x:Name="btn_login" Click="Button_Click" Style="{StaticResource button_style}" Margin="0 20 0 0" Content="Войти"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

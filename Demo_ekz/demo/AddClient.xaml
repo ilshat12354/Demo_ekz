@@ -1,0 +1,35 @@
+﻿<Window x:Class="demo.AddClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:demo"
+        mc:Ignorable="d"
+        Title="AddClient" Height="362" Width="445.012" ResizeMode="NoResize">
+    <Grid Margin="0,79,0,0">
+
+        <StackPanel Background="#76e383" Margin="0,-79,0,256">
+            <Image Height="40" Width="66" Margin="-300, 10, 0, 0">
+                <Image.Source>
+                    <ImageSource>/media/logo.ico</ImageSource>
+                </Image.Source>
+            </Image>
+            <TextBlock Style="{StaticResource headline_hat}" Margin="-50, -40, 0, 0" Text="Приэльбрусье" FontSize="20" Height="27"/>
+        </StackPanel>
+
+        <Label Content="ФИО" HorizontalAlignment="Left" Margin="27,32,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="DimGray"/>
+        <TextBox HorizontalAlignment="Left" Style="{StaticResource textbox_style}" Height="23" Margin="85,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="fio"/>
+        <Label Content="Серия" HorizontalAlignment="Left" Margin="27,60,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="DimGray"/>
+        <TextBox HorizontalAlignment="Left" Style="{StaticResource textbox_style}" Height="23" Margin="85,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="ser"/>
+        <Label Content="Номер" HorizontalAlignment="Left" Margin="27,88,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="DimGray"/>
+        <TextBox HorizontalAlignment="Left" Style="{StaticResource textbox_style}" Height="23" Margin="85,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="num"/>
+        <Calendar HorizontalAlignment="Left" Margin="232,32,0,0" VerticalAlignment="Top" Height="141" x:Name="calnd"/>
+        <Label Content="Адрес" HorizontalAlignment="Left" Margin="27,118,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="DimGray"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Style="{StaticResource textbox_style}" Margin="85,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="addr"/>
+        <Label Content="email" HorizontalAlignment="Left" Margin="27,146,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="DimGray"/>
+        <TextBox HorizontalAlignment="Left" Style="{StaticResource textbox_style}" Height="23" Margin="85,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="eml"/>
+        <Label Content="пароль" HorizontalAlignment="Left" Margin="27,174,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="DimGray"/>
+        <TextBox HorizontalAlignment="Left" Style="{StaticResource textbox_style}" Height="23" Margin="85,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" x:Name="pass"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Style="{StaticResource button_style}" Margin="232,180,0,0" VerticalAlignment="Top" Width="179" Height="21" Click="Button_Click" FontFamily="Comic Sans MS"/>
+    </Grid>
+</Window>
